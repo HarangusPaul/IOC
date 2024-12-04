@@ -1,0 +1,268 @@
+﻿{
+  "questions": [
+    {
+      "question": "Ce este necesar pentru a susține viața?",
+      "answers": {
+        "a": "Aer, apă, hrană",
+        "b": "Nisip, pietre, lumină"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Ce este un organism viu?",
+      "answers": {
+        "a": "Un obiect care crește și se înmulțește",
+        "b": "O piatră mare și grea"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Ce fac plantele cu dioxidul de carbon?",
+      "answers": {
+        "a": "Îl elimină în aer",
+        "b": "Îl folosesc pentru fotosinteză"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Care este rolul principal al rădăcinilor plantelor?",
+      "answers": {
+        "a": "Absorb apă și substanțe nutritive",
+        "b": "Produc oxigen"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Ce tip de animal este găina?",
+      "answers": {
+        "a": "Mamifer",
+        "b": "Pasăre"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Din ce sunt alcătuiți solzii peștilor?",
+      "answers": {
+        "a": "Oase",
+        "b": "Material dur, protector"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Ce fenomen are loc atunci când o plantă se orientează spre lumină?",
+      "answers": {
+        "a": "Fotosinteză",
+        "b": "Fototropism"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Care este mediul principal de viață al amfibienilor?",
+      "answers": {
+        "a": "Pe uscat",
+        "b": "În apă și pe uscat"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Cum se numesc păsările care călătoresc pe distanțe mari?",
+      "answers": {
+        "a": "Migratoare",
+        "b": "Sedentare"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Ce organ ajută peștii să respire?",
+      "answers": {
+        "a": "Branhii",
+        "b": "Plămâni"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Ce proces ajută plantele să producă oxigen?",
+      "answers": {
+        "a": "Respirația",
+        "b": "Fotosinteza"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Cum se deplasează șerpii?",
+      "answers": {
+        "a": "Prin târâre",
+        "b": "Prin zbor"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Care este mediul de viață al unui rechin?",
+      "answers": {
+        "a": "Apa dulce",
+        "b": "Apa sărată"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Ce element este esențial pentru respirația viețuitoarelor?",
+      "answers": {
+        "a": "Oxigen",
+        "b": "Dioxid de carbon"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Ce grupă de animale depune icre?",
+      "answers": {
+        "a": "Mamifere",
+        "b": "Pești"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Ce părți ale corpului ajută păsările să zboare?",
+      "answers": {
+        "a": "Aripile",
+        "b": "Picioarele"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Care viețuitoare elimină oxigen în aer?",
+      "answers": {
+        "a": "Plantele",
+        "b": "Animalele"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Ce este germinația?",
+      "answers": {
+        "a": "Procesul prin care o sămânță încolțește",
+        "b": "Hrănirea plantelor cu apă"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Cum se numesc animalele care se hrănesc cu plante și animale?",
+      "answers": {
+        "a": "Carnivore",
+        "b": "Omnivore"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Ce element este necesar pentru fotosinteză?",
+      "answers": {
+        "a": "Lumină",
+        "b": "Oxigen"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Care este rolul principal al branhiei la pești?",
+      "answers": {
+        "a": "Respirația",
+        "b": "Hrănirea"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Ce este poluarea?",
+      "answers": {
+        "a": "Modificarea naturală a mediului",
+        "b": "Introducerea de substanțe dăunătoare în mediu"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Cum obțin plantele apa necesară?",
+      "answers": {
+        "a": "Din aer",
+        "b": "Din sol"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Care este principalul motiv al migrației păsărilor?",
+      "answers": {
+        "a": "Schimbarea habitatului",
+        "b": "Lipsa hranei în sezonul rece"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Ce tip de animal este crocodilul?",
+      "answers": {
+        "a": "Mamifer",
+        "b": "Reptilă"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Cum contribuie plantele la circuitul apei?",
+      "answers": {
+        "a": "Absorb apa și o elimină prin transpirație",
+        "b": "Transformă apa în nutrienți"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "question": "Care este diferența principală între păsări și mamifere?",
+      "answers": {
+        "a": "Modul de deplasare",
+        "b": "Modul de reproducere"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Cum își protejează camuflajul un animal?",
+      "answers": {
+        "a": "Îl ajută să atragă prada",
+        "b": "Îl ascunde de prădători"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Ce resursă naturală este considerată regenerabilă?",
+      "answers": {
+        "a": "Petrolul",
+        "b": "Energia solară"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Care viețuitoare se hrănesc cu insecte?",
+      "answers": {
+        "a": "Reptilele",
+        "b": "Plantele carnivore"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Ce proces are loc când apa trece din stare lichidă în stare gazoasă?",
+      "answers": {
+        "a": "Solidificare",
+        "b": "Vaporizare"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Ce tip de sol este cel mai fertil?",
+      "answers": {
+        "a": "Nisipul",
+        "b": "Humusul"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "question": "Cum ajută pădurile la menținerea calității aerului?",
+      "answers": {
+        "a": "Produc oxigen și absorb dioxid de carbon",
+        "b": "Consumă oxigen pentru creștere"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}
