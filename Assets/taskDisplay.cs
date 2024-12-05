@@ -131,16 +131,19 @@ public class TaskDisplay : MonoBehaviour
     private void HandleClick()
     {
         // Extract the index from the name of the nearest child
+        Debug.Log(0);
         string childName = child.name;
         int questionIndex = int.Parse(childName) - 1; // Assuming child names are "1", "2", etc.
-
+        Debug.Log(2);
         // Ensure the question index is valid
         if (questionIndex >= 0 && questionIndex < questions.Length)
         {
             Question currentQuestion = questions[questionIndex];
             
             // Set the question text and button answers based on the question data
+            Debug.Log(3);
             taskText.text = currentQuestion.question;
+            Debug.Log(1);
             button1.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.answers[0];
             button2.GetComponentInChildren<TextMeshProUGUI>().text = currentQuestion.answers[1];
 
