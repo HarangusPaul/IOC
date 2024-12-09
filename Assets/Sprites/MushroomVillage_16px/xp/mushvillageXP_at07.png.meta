@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mushvillageXP_at07_0: -6624379742988085103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

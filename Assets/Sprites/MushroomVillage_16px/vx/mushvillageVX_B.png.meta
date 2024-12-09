@@ -447,7 +447,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mushvillageVX_B_0: 8259996416580032084
+      mushvillageVX_B_1: -8973263236132848872
+      mushvillageVX_B_10: -8900493418502813446
+      mushvillageVX_B_11: 349093250708521551
+      mushvillageVX_B_12: -1513514999023363250
+      mushvillageVX_B_2: 6476527214100340738
+      mushvillageVX_B_3: -970014047027954302
+      mushvillageVX_B_4: 4223938156577872282
+      mushvillageVX_B_5: 6114432673821008980
+      mushvillageVX_B_6: 6594533853899382328
+      mushvillageVX_B_7: 4782023483690650292
+      mushvillageVX_B_8: 2610561964510247658
+      mushvillageVX_B_9: -2544252761485191559
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
