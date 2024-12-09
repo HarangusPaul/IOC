@@ -75,7 +75,7 @@ public class TaskDisplay : MonoBehaviour
         new Question("Ce se întâmplă cu o plantă lipsită de lumină?", new string[] { "Se oprește fotosinteza", "Crește mai repede" }, "a"),
         new Question("Cum influențează poluarea solului agricultura?", new string[] { "Crește producția agricolă", "Reduce fertilitatea solului" }, "b"),
         new Question("Care este principala sursă de energie pentru fotosinteză?", new string[] { "Dioxidul de carbon", "Lumina solară" }, "b"),
-        new Question("Cum respiră animalele acvatice?", new string[] { "Cu plămâni", "Cu branhii" }, "b")
+        new Question("Cum respiră animalele acvatice?", new string[] { "Cu plămâni", "Cu branhii" }, "b"),
         // Medii:
         new Question("Ce proprietate au metalele care permite conducerea electricității?", new string[] {"Conductivitatea electrică", "Elasticitatea"}, "a"),
         new Question("Cum se numesc schimbările de la stare lichidă la stare solidă?", new string[] {"Vaporizare", "Solidificare"}, "b"),
@@ -226,7 +226,7 @@ public class TaskDisplay : MonoBehaviour
         new Question("Cum era organizată societatea dacică?", new string[] { "În clase sociale cu roluri bine definite", "Fără reguli sau ierarhii" }, "a"),
         new Question("Cum se numește perioada în care au domnit Burebista și Decebal?", new string[] { "Evul Mediu timpuriu", "Epoca dacică" }, "b"),
         new Question("Ce construcție faimoasă a fost realizată de Apolodor din Damasc?", new string[] { "Columna lui Traian", "Podul peste Dunăre" }, "b"),
-        new Question("Ce s-a întâmplat cu dacii după cucerirea romană?", new string[] { "Au migrat complet din Dacia", "Au fost romanizați treptat" }, "b")
+        new Question("Ce s-a întâmplat cu dacii după cucerirea romană?", new string[] { "Au migrat complet din Dacia", "Au fost romanizați treptat" }, "b"),
         new Question("Cum a fost desemnat Alexandru Ioan Cuza domnitor în ambele principate?", new string[] { "Prin dubla alegere", "Prin luptă militară" }, "a"),
         new Question("Ce bătălie faimoasă a avut loc la Posada?", new string[] { "Victoria lui Basarab I împotriva regelui Ungariei", "Lupta dintre Ștefan cel Mare și otomani" }, "a"),
         new Question("Cum se numea regiunea unde Mihai Viteazul a condus prima unire?", new string[] { "Țările Române (Moldova, Țara Românească, Transilvania)", "Imperiul Roman" }, "a"),
@@ -236,19 +236,19 @@ public class TaskDisplay : MonoBehaviour
         new Question("Ce este un „sanctuar”?", new string[] { "Un loc sfânt folosit pentru ritualuri religioase", "O fortificație militară" }, "a"),
         new Question("Ce rol avea Burebista în consolidarea Daciei?", new string[] { "A unificat triburile dacice și a creat un stat puternic", "A fost un lider militar roman" }, "a"),
         new Question("Cum au influențat romanii arhitectura din Dacia?", new string[] { "Nu au adus schimbări arhitecturale", "Au introdus stilul roman cu arcuri și coloane" }, "b"),
-        new Question("Ce s-a întâmplat cu Columna lui Traian după construcția sa?", new string[] { "A fost distrusă în Evul Mediu", "A rămas un simbol al victoriei romane" }, "b")
+        new Question("Ce s-a întâmplat cu Columna lui Traian după construcția sa?", new string[] { "A fost distrusă în Evul Mediu", "A rămas un simbol al victoriei romane" }, "b"),
 
         //Grele
         new Question("Care era religia dacilor înainte de romanizare?", new string[] { "Politeistă, cu Zamolxis ca zeu principal", "Monoteistă, cu Jupiter ca zeu principal" }, "a"),
         new Question("Cum a influențat romanizarea agricultura dacilor?", new string[] { "Nu au adus schimbări", "Au introdus noi unelte și metode de cultivare" }, "b"),
         new Question("Ce oraș roman a fost ridicat în sudul Daciei pentru administrație?", new string[] { "Tomis", "Apulum" }, "b"),
-        new Question("Ce reprezintă "Dacia Felix"?", new string[] { "Dacia Romană, provincie prosperă", "O bătălie câștigată de romani" }, "a"),
+        new Question("Ce reprezintă \"Dacia Felix\"?", new string[] { "Dacia Romană, provincie prosperă", "O bătălie câștigată de romani" }, "a"),
         new Question("Cum s-a schimbat religia dacilor după romanizare?", new string[] { "Zeii romani au fost adoptați", "Religia lor a rămas neschimbată" }, "a"),
         new Question("Care a fost consecința războaielor daco-romane?", new string[] { "Distrugerea completă a Daciei", "Formarea provinciei Dacia" }, "b"),
-        new Question("Ce înseamnă "colonie romană"?", new string[] { "Un teritoriu cucerit și organizat de romani", "O alianță între state" }, "a"),
+        new Question("Ce înseamnă \"colonie romană\"?", new string[] { "Un teritoriu cucerit și organizat de romani", "O alianță între state" }, "a"),
         new Question("Cine era liderul dacilor în timpul cuceririi romane?", new string[] { "Burebista", "Decebal" }, "b"),
         new Question("Cum au influențat războaiele daco-romane arhitectura din Dacia?", new string[] { "Au fost construite orașe și drumuri romane", "Nu au avut influență asupra arhitecturii" }, "a"),
-        new Question("Care este rolul istoriei pentru un popor?", new string[] { "Uitarea tradițiilor și adoptarea altor culturi", "Păstrarea identității și învățarea din trecut" }, "b")
+        new Question("Care este rolul istoriei pentru un popor?", new string[] { "Uitarea tradițiilor și adoptarea altor culturi", "Păstrarea identității și învățarea din trecut" }, "b"),
 
 
         //Geografie
@@ -272,7 +272,7 @@ public class TaskDisplay : MonoBehaviour
         new Question("Ce țară se află la vest de România?", new string[] { "Ucraina", "Ungaria" }, "b"),
         new Question("Ce formă de relief este Valea Prahovei?", new string[] { "Munte", "Depresiune" }, "b"),
         new Question("Ce este un continent?", new string[] { "O mare mare", "O mare masă de pământ care conține țări și oceane" }, "b"),
-        new Question("Ce continent este cel mai apropiat de Polul Sud?", new string[] { "Africa", "Antarctica" }, "b")
+        new Question("Ce continent este cel mai apropiat de Polul Sud?", new string[] { "Africa", "Antarctica" }, "b"),
         
         //Usoare spre medii
         new Question("Care este capitala Franței?", new string[] { "Berlin", "Paris" }, "b"),
@@ -294,7 +294,7 @@ public class TaskDisplay : MonoBehaviour
         new Question("Ce se află la nord de România?", new string[] { "Ucraina", "Bulgaria" }, "a"),
         new Question("Care este cel mai important fluviu din Africa?", new string[] { "Nil", "Congo" }, "a"),
         new Question("Cum se numește țara cunoscută pentru Marele Zid?", new string[] { "Coreea de Nord", "China" }, "b"),
-        new Question("Ce continent are cea mai mare densitate a populației?", new string[] { "Asia", "Europa" }, "a")
+        new Question("Ce continent are cea mai mare densitate a populației?", new string[] { "Asia", "Europa" }, "a"),
 
         //Medii
         new Question("Ce este o insulă?", new string[] { "O zonă de uscat înconjurată de apă", "O zonă acoperită cu păduri" }, "a"),
@@ -316,7 +316,7 @@ public class TaskDisplay : MonoBehaviour
         new Question("Care este cel mai adânc lac din lume?", new string[] { "Lacul Baikal", "Lacul Caspic" }, "a"),
         new Question("Ce se află la nord de România?", new string[] { "Ucraina", "Bulgaria" }, "a"),
         new Question("Care este cel mai important fluviu din Africa?", new string[] { "Nil", "Congo" }, "a"),
-        new Question("Cum se numește țara cunoscută pentru Marele Zid?", new string[] { "Coreea de Nord", "China" }, "b")
+        new Question("Cum se numește țara cunoscută pentru Marele Zid?", new string[] { "Coreea de Nord", "China" }, "b"),
 
         //Medii spre grele
         new Question("Care este capitala statului Canada?", new string[] { "Toronto", "Ottawa" }, "b"),
@@ -348,7 +348,7 @@ public class TaskDisplay : MonoBehaviour
         new Question("Care este cel mai adânc lac din Africa?", new string[] { "Lacul Tanganyika", "Lacul Victoria" }, "a"),
         new Question("Care este cel mai mare stat din America de Sud?", new string[] { "Argentina", "Brazilia" }, "b"),
         new Question("În ce țară se află Marele Canal din Veneția?", new string[] { "Italia", "Grecia" }, "a"),
-        new Question("Care este țara cu cel mai mare număr de insule?", new string[] { "Suedia", "Indonezia" }, "b")
+        new Question("Care este țara cu cel mai mare număr de insule?", new string[] { "Suedia", "Indonezia" }, "b"),
 
         //Grele
         new Question("Care este cel mai mare deșert rece din lume?", new string[] { "Deșertul Gobi", "Deșertul Antarctic" }, "b"),
@@ -360,7 +360,7 @@ public class TaskDisplay : MonoBehaviour
         new Question("Care este cel mai lung râu din Asia?", new string[] { "Yangtze", "Gange" }, "a"),
         new Question("Care este cel mai mare ocean din lume?", new string[] { "Oceanul Atlantic", "Oceanul Pacific" }, "b"),
         new Question("În ce țară se află cel mai mare vulcan activ din lume?", new string[] { "Japonia", "Statele Unite ale Americii" }, "b"),
-        new Question("Care este cel mai înalt vârf din Alpi?", new string[] { "Mont Blanc", "Matterhorn" }, "a")
+        new Question("Care este cel mai înalt vârf din Alpi?", new string[] { "Mont Blanc", "Matterhorn" }, "a"),
 
     };
 
