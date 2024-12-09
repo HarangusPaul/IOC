@@ -12,6 +12,8 @@ public class TaskDisplay : MonoBehaviour
     // Reference to the empty GameObject (this will have multiple child objects)
     public GameObject triggerObject;
     
+    public GameObject damageObject;
+    
     public GameObject question;
     public GameObject questionText;
     
@@ -27,6 +29,7 @@ public class TaskDisplay : MonoBehaviour
     public float proximityThreshold = 2f;
 
     private Transform child;
+    private Transform childDmg;
 
     // The data structure to hold the question and answers (you can replace this with a file loading mechanism later)
     private Question[] questions = {
@@ -40,6 +43,9 @@ public class TaskDisplay : MonoBehaviour
 
     // List to store all the child GameObjects of the triggerObject
     private List<Transform> childrenList = new List<Transform>();
+    
+    
+    private List<Transform> damageObjects = new List<Transform>();
 
     private void Start()
     {
@@ -68,6 +74,12 @@ public class TaskDisplay : MonoBehaviour
         {
             Transform childTransform = triggerObject.transform.GetChild(i);
             childrenList.Add(childTransform);
+        }
+        
+        for (int i = 0; i < damageObject.transform.childCount; i++)
+        {
+            Transform childTransform = damageObject.transform.GetChild(i);
+            damageObjects.Add(childTransform);
         }
     }
 
@@ -107,6 +119,7 @@ public class TaskDisplay : MonoBehaviour
         // Get the position of the taskTitleMap (this GameObject)
         Vector2 taskTitleMapPosition = transform.position;
 
+        int i=0;
         // Loop through the children stored in the list
         foreach (Transform childTransform in childrenList)
         {
@@ -115,13 +128,16 @@ public class TaskDisplay : MonoBehaviour
 
             // Calculate the distance between the taskTitleMap and this child object
             float distance = Vector2.Distance(taskTitleMapPosition, childPosition);
-
+            
             // If any child is within the proximity threshold, return true
             if (distance <= proximityThreshold)
             {
                 child = childTransform;
+                childDmg = damageObjects[i];
                 return true;
             }
+
+            i++;
         }
 
         // If none of the children are close enough, return false
@@ -197,7 +213,7 @@ public class TaskDisplay : MonoBehaviour
             clickedButton.GetComponent<Image>().color = Color.green; // Set button color to green for correct answer
 
             // Hide the child GameObject after a correct answer with a delay
-            StartCoroutine(WaitAndRemoveChild(child, clickedButton));
+            StartCoroutine(WaitAndRemoveChild(child,childDmg, clickedButton));
         }
         else
         {
@@ -208,7 +224,7 @@ public class TaskDisplay : MonoBehaviour
         }
     }
 
-    private IEnumerator WaitAndRemoveChild(Transform child, Button clickedButton)
+    private IEnumerator WaitAndRemoveChild(Transform child,Transform dmg, Button clickedButton)
     {
         // Wait for 3 seconds before removing the child
         yield return new WaitForSeconds(3f);
@@ -218,6 +234,8 @@ public class TaskDisplay : MonoBehaviour
 
         // Remove the child from the list
         childrenList.Remove(child);
+
+        dmg.gameObject.SetActive(false);
 
         // Reset the button color after a short delay
         yield return new WaitForSeconds(1f);  // Waiting for a moment before resetting the button color
