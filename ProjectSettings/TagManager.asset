@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -41,3 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Water Colider
+    uniqueID: 1739040977
+    locked: 0
+  - name: Colider
+    uniqueID: 3389858741
+    locked: 0
+  - name: Texture
+    uniqueID: 2487215369
+    locked: 0
+  - name: Character
+    uniqueID: 470407275
+    locked: 0
+  - name: UI
+    uniqueID: 3549659265
+    locked: 0
+  m_RenderingLayers:
+  - Default

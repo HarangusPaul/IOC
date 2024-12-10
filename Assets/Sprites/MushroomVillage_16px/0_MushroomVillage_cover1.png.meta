@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      0_MushroomVillage_cover1_0: 6435169004992622031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
