@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +19,8 @@ public class TaskDisplay : MonoBehaviour
     public GameObject questionText;
     
     public TextMeshProUGUI taskText;
+    
+    public TextMeshProUGUI Money;
     
     public Button button1;
     public Button button2;
@@ -559,6 +562,10 @@ public class TaskDisplay : MonoBehaviour
         childrenList.Remove(child);
 
         dmg.gameObject.SetActive(false);
+
+        int monys = Int32.Parse(Money.text) + 10;
+
+        Money.text = monys.ToString();
 
         // Reset the button color after a short delay
         yield return new WaitForSeconds(1f);  // Waiting for a moment before resetting the button color
