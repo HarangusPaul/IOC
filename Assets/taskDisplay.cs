@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 public class TaskDisplay : MonoBehaviour
 {
@@ -373,9 +374,17 @@ public class TaskDisplay : MonoBehaviour
     
     private List<Transform> damageObjects = new List<Transform>();
 
+
+    private string filePath;
+    
+    private string filePath2;
+
     private void Start()
     {
         // Ensure the taskTitleMap starts hidden
+
+        filePath = Application.persistentDataPath + "/save.txt";
+        filePath2 = Application.persistentDataPath + "/save_score.txt";
         if (taskTitleMap != null)
         {
             taskTitleMap.SetActive(false);
@@ -396,18 +405,54 @@ public class TaskDisplay : MonoBehaviour
         }
 
         // Populate the children list at the start
+        List<string> namesFromFile = ReadChildNamesFromFile();
         for (int i = 0; i < triggerObject.transform.childCount; i++)
         {
             Transform childTransform = triggerObject.transform.GetChild(i);
-            childrenList.Add(childTransform);
+
+            // Check if the child's name is not in the list
+            if (!namesFromFile.Contains(childTransform.name))
+            {
+                childrenList.Add(childTransform);
+                Debug.Log($"Added {childTransform.name} to childrenList.");
+            }
+            else
+            {
+                Debug.Log($"Skipped {childTransform.name} because it's in the file.");
+            }
         }
         
         for (int i = 0; i < damageObject.transform.childCount; i++)
         {
             Transform childTransform = damageObject.transform.GetChild(i);
-            damageObjects.Add(childTransform);
+
+            // Check if the child's name is not in the list
+            if (!namesFromFile.Contains(childTransform.name))
+            {
+                damageObjects.Add(childTransform);
+                Debug.Log($"Added {childTransform.name} to damageObjects.");
+            }
+            else
+            {
+                childTransform.gameObject.SetActive(false);
+                Debug.Log($"Skipped {childTransform.name} because it's in the file.");
+            }
         }
+        if (!File.Exists(filePath))
+        {
+            File.Create(filePath).Close();
+        } 
+        if (!File.Exists(filePath2))
+        {
+            File.Create(filePath2).Close();
+        } 
+        
+        int loadedValue = LoadInt();
+        Money.text = loadedValue.ToString();
+        // PrintChildNames();
     }
+    
+    
 
     private void Update()
     {
@@ -549,6 +594,53 @@ public class TaskDisplay : MonoBehaviour
             StartCoroutine(ResetButtonColorAfterDelay(clickedButton));
         }
     }
+    
+    public void SaveInt(int value)
+    {
+        try
+        {
+            // Write the integer to the file
+            File.WriteAllText(filePath2, value.ToString());
+            Debug.Log($"Integer {value} saved to {filePath}");
+        }
+        catch (IOException ex)
+        {
+            Debug.LogError("Error saving integer: " + ex.Message);
+        }
+    }
+    public int LoadInt()
+    {
+        try
+        {
+            // Check if the file exists
+            if (File.Exists(filePath2))
+            {
+                string content = File.ReadAllText(filePath2);
+                int value;
+            
+                // Parse the string to an integer
+                if (int.TryParse(content, out value))
+                {
+                    Debug.Log($"Integer {value} loaded from {filePath2}");
+                    return value;
+                }
+                else
+                {
+                    Debug.LogWarning($"File content is not a valid integer: {content}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"File not found at {filePath}");
+            }
+        }
+        catch (IOException ex)
+        {
+            Debug.LogError("Error loading integer: " + ex.Message);
+        }
+
+        return 0; // Default value if file doesn't exist or parsing fails
+    }
 
     private IEnumerator WaitAndRemoveChild(Transform child,Transform dmg, Button clickedButton)
     {
@@ -566,10 +658,67 @@ public class TaskDisplay : MonoBehaviour
         int monys = Int32.Parse(Money.text) + 10;
 
         Money.text = monys.ToString();
+        
+        SaveInt(monys);
+        
+        SaveChildNameToFile(child.name);
 
         // Reset the button color after a short delay
         yield return new WaitForSeconds(1f);  // Waiting for a moment before resetting the button color
         ResetButtonColor(clickedButton);
+    }
+    
+    private void SaveChildNameToFile(string childName)
+    {
+        // Append the child's name to the file with a new line
+        File.AppendAllText(filePath, childName + "\n");
+        Debug.Log($"Child name saved to file: {childName}");
+    }
+    
+    public void PrintChildNames()
+    {
+        Debug.Log("Aici merge!");
+        List<string> names = ReadChildNamesFromFile();
+        foreach (string name in names)
+        {
+            Debug.Log("Child name: " + name);
+        }
+    }
+    
+    public List<string> ReadChildNamesFromFile()
+    {
+        List<string> childNames = new List<string>();
+
+        try
+        {
+            // Check if the file exists
+            if (File.Exists(filePath))
+            {
+                // Read all lines from the file
+                string[] lines = File.ReadAllLines(filePath);
+
+                // Add each line to the list
+                foreach (string line in lines)
+                {
+                    if (!string.IsNullOrWhiteSpace(line)) // Ignore empty or whitespace lines
+                    {
+                        childNames.Add(line.Trim());
+                    }
+                }
+
+                Debug.Log("Read child names from file successfully.");
+            }
+            else
+            {
+                Debug.LogWarning("File not found: " + filePath);
+            }
+        }
+        catch (IOException ex)
+        {
+            Debug.LogError("Error reading file: " + ex.Message);
+        }
+
+        return childNames;
     }
 
     private IEnumerator ResetButtonColorAfterDelay(Button clickedButton)
